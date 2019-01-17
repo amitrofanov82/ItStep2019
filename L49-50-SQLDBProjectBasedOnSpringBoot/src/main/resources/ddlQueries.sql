@@ -39,5 +39,51 @@ ALTER TABLE goods ALTER COLUMN NAME SET NOT NULL;
 
 DELETE FROM GOODS;
 
-drop table customers;
+ALTER TABLE customers RENAME users;
+
+ALTER TABLE users
+ADD birthday date;
+
+drop table users;
 drop table goods;
+
+CREATE TABLE shop_clients (
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    Address varchar(255),
+    City varchar(255) ,
+    Age int,
+    IsVip boolean,
+    /*CONSTRAINT shop_clients_PK */PRIMARY KEY(LASTNAME, FIRSTNAME)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
