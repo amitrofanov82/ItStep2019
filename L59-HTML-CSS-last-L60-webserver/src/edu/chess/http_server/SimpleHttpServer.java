@@ -24,7 +24,7 @@ public class SimpleHttpServer {
 		try {
 			this.ss = new ServerSocket(8080);
 		} catch (IOException e) {
-			System.err.println("[Ошибка создания порта сервера]");
+			System.err.println("[РћС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РїРѕСЂС‚Р° СЃРµСЂРІРµСЂР°]");
 			System.err.println("\n\n");
 			e.printStackTrace();
 			System.err.println("\n\n");
@@ -36,13 +36,12 @@ public class SimpleHttpServer {
 		long timeStartServer = System.currentTimeMillis();
 		while (true) {
 			try {
+				System.out.println("Принимаю клиента");
 				Socket s = ss.accept();
-				/* Console */
-				System.out.println("[Клиент принят]");
+				System.out.println("Принял клиента");
 
 				new Thread(new SocketProcessor(s)).start();
 
-				// Сервер работает 10 мин
 				if (timeOutHttpServer(timeStartServer)) {
 					ss.close();
 					System.exit(1);
@@ -68,9 +67,7 @@ public class SimpleHttpServer {
 		return false;
 	}
 
-	/**
-	 * Класс основной магии.
-	 */
+
 	private static class SocketProcessor implements Runnable {
 
 		private Socket s;
@@ -85,14 +82,14 @@ public class SimpleHttpServer {
 
 		public void run() {
 			/* Console */
-			System.out.println("[Сервер HTTP получил запрос]");
+			System.out.println("Начало обслуживани нового клиента");
 			try {
 				// *************************************************************
 				String[] request = readInputHeaders();
 
 				String requestResourceName = ResourceURLParserUtils.whatIsRequestResource(request[0]);
 
-				// при пустом запросе всегда возвращать главную.
+				// РїСЂРё РїСѓСЃС‚РѕРј Р·Р°РїСЂРѕСЃРµ РІСЃРµРіРґР° РІРѕР·РІСЂР°С‰Р°С‚СЊ РіР»Р°РІРЅСѓСЋ.
 				if (requestResourceName == "") {
 					requestResourceName = "index.html";
 				}
@@ -105,7 +102,7 @@ public class SimpleHttpServer {
 				writeResponse(new ResourceToBytesFromFile().getResource(requestResourceName), fileType);
 				// *************************************************************
 			} catch (Throwable e) {
-				System.err.println("[Проблема в потоке http сервера]");
+				System.err.println("[РџСЂРѕР±Р»РµРјР° РІ РїРѕС‚РѕРєРµ http СЃРµСЂРІРµСЂР°]");
 				System.err.println("\n\n");
 				e.printStackTrace();
 				System.out.println("\n\n");
@@ -113,39 +110,36 @@ public class SimpleHttpServer {
 				try {
 					s.close();
 				} catch (Throwable t) {
-					System.err.println("[Проблема c закрытием сокета http сервера]");
+					System.err.println("[РџСЂРѕР±Р»РµРјР° c Р·Р°РєСЂС‹С‚РёРµРј СЃРѕРєРµС‚Р° http СЃРµСЂРІРµСЂР°]");
 					System.err.println("\n\n");
 					t.printStackTrace();
 					System.err.println("\n\n");
 				}
 			}
-			/* Console */System.out.println("[Обработка клиента завершена]" + "\n\n\n");
+			/* Console */System.out.println("[РћР±СЂР°Р±РѕС‚РєР° РєР»РёРµРЅС‚Р° Р·Р°РІРµСЂС€РµРЅР°]" + "\n\n\n");
 		}
 
 		/**
-		 * Этод метод читает из потока заголовок запроса.
+		 * Р­С‚РѕРґ РјРµС‚РѕРґ С‡РёС‚Р°РµС‚ РёР· РїРѕС‚РѕРєР° Р·Р°РіРѕР»РѕРІРѕРє Р·Р°РїСЂРѕСЃР°.
 		 * 
-		 * @return - возвращает масив строк содержаший заголовк запроса.
+		 * @return - РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃРёРІ СЃС‚СЂРѕРє СЃРѕРґРµСЂР¶Р°С€РёР№ Р·Р°РіРѕР»РѕРІРє Р·Р°РїСЂРѕСЃР°.
 		 */
 		private String[] readInputHeaders() {
-			/* Console */System.out.println("[Чтение запроса серверу]");
+			/* Console */System.out.println("[Р§С‚РµРЅРёРµ Р·Р°РїСЂРѕСЃР° СЃРµСЂРІРµСЂСѓ]");
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
-			String[] arrayHeader = new String[100];// С запасом =)
+			String[] arrayHeader = new String[100];// РЎ Р·Р°РїР°СЃРѕРј =)
 			int counter = 0;
 			while (true) {
 				try {
-					// ******************************************************
 					arrayHeader[counter] = br.readLine();
 					System.out.println("\t{" + arrayHeader[counter] + "}");
-					// Проверка на конец данных
 					if (arrayHeader[counter] == null || arrayHeader[counter].trim().length() == 0) {
 						break;
 					}
 					counter++;
-					// ******************************************************
 				} catch (IOException e) {
-					System.err.println("[Проблема чтения входяшего потока]");
+					System.err.println("[РџСЂРѕР±Р»РµРјР° С‡С‚РµРЅРёСЏ РІС…РѕРґСЏС€РµРіРѕ РїРѕС‚РѕРєР°]");
 					System.err.println("\n\n");
 					e.printStackTrace();
 					System.err.println("\n\n");
@@ -153,23 +147,23 @@ public class SimpleHttpServer {
 
 			}
 
-			/* Console */System.out.println("[Сервер HTTP прочитал заголовок]");
+			/* Console */System.out.println("[РЎРµСЂРІРµСЂ HTTP РїСЂРѕС‡РёС‚Р°Р» Р·Р°РіРѕР»РѕРІРѕРє]");
 			return arrayHeader;
 		}
 
 		/**
-		 * Этот метод формирует ответ клиенту, в виде шоловы ответа и запрашиваемого
-		 * ресурса.
+		 * Р­С‚РѕС‚ РјРµС‚РѕРґ С„РѕСЂРјРёСЂСѓРµС‚ РѕС‚РІРµС‚ РєР»РёРµРЅС‚Сѓ, РІ РІРёРґРµ С€РѕР»РѕРІС‹ РѕС‚РІРµС‚Р° Рё Р·Р°РїСЂР°С€РёРІР°РµРјРѕРіРѕ
+		 * СЂРµСЃСѓСЂСЃР°.
 		 * 
 		 * @param resourse
-		 *            - масив байт запрошеного ресурса.
+		 *            - РјР°СЃРёРІ Р±Р°Р№С‚ Р·Р°РїСЂРѕС€РµРЅРѕРіРѕ СЂРµСЃСѓСЂСЃР°.
 		 * @param mimeType
-		 *            - тип передоваемого ресурса.
+		 *            - С‚РёРї РїРµСЂРµРґРѕРІР°РµРјРѕРіРѕ СЂРµСЃСѓСЂСЃР°.
 		 * @throws Throwable
-		 *             - при ошибке записи в поток.
+		 *             - РїСЂРё РѕС€РёР±РєРµ Р·Р°РїРёСЃРё РІ РїРѕС‚РѕРє.
 		 */
 		private void writeResponse(byte[] resourse, String mimeType) throws Throwable {
-			/* Console */System.out.println("[Создание ответа сервера]");
+			/* Console */System.out.println("[РЎРѕР·РґР°РЅРёРµ РѕС‚РІРµС‚Р° СЃРµСЂРІРµСЂР°]");
 			
 			String response = "";
 			response += "HTTP/1.1 200 OK\r\n";
@@ -185,10 +179,37 @@ public class SimpleHttpServer {
 			System.out.println("\t{" + "Connection: close" + "}");
 			System.out.println("\t{}");
 
-			os.write(response.getBytes(/*нужна АСКИ-совм. кодировка*/));
+			os.write(response.getBytes(/*РЅСѓР¶РЅР° РђРЎРљР�-СЃРѕРІРј. РєРѕРґРёСЂРѕРІРєР°*/));
 			os.write(resourse);
 			os.flush();
 		}
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

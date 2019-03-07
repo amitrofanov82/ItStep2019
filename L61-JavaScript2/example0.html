@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+	<script type="text/javascript">
+		console.log("перед html (так нельзя)");
+		console.log(replace([1,2,3], 1, 2));
+	</script>
+<html>
+	<script type="text/javascript">
+		//code here
+	</script>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		console.log("in head");
+		console.log(replace([1,2,3], 1, 2));
+	</script>
+		
+	<script src="jsExample1.js"></script>
+</head>
+
+<script type="text/javascript">
+	console.log("in neck");
+	
+	function replace(massiv, i, j){
+		var temp = massiv[i];
+		massiv[i]=massiv[j];
+		massiv[j]=temp;
+		return massiv;
+	}
+</script>
+
+<body onclick='
+		console.log("in attribut");
+		console.log(replace(["is", "body", "clicked"], 0, 1));
+'>
+	<script type="text/javascript">
+		console.log("in body");
+		console.log(replace([1,2,3], 1, 2));
+		sayMeow();
+	</script>
+	
+	body content
+</body>
+	<script type="text/javascript">
+		console.log("after body");
+		console.log(replace([1,2,3], 1, 2));
+	</script>
+</html>
+	<script type="text/javascript">
+		console.log("after html (так нельзя)");
+		console.log(replace([1,2,3], 1, 2));
+	</script>
