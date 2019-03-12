@@ -7,6 +7,9 @@
 console.log("from file");
 
 function sayMeow(){
+	/*while (true){
+		console.log("я завис");
+	}*/
 	alert("MЯУ");
 }
 
@@ -34,7 +37,8 @@ function printTypes(){
 	console.log(typeof sayMeow());
 	console.log(typeof 10)
 	console.log(typeof 10000000000);
-	console.log(typeof 10.123635436);console.log(typeof true);
+	console.log(typeof 10.123635436);
+	console.log(typeof true);
 
 	console.log(typeof true+1)
 	console.log(typeof 
@@ -43,7 +47,7 @@ function printTypes(){
 	console.log(typeof a2);
 	console.log(typeof null);
 	
-	if (a = undefined) {
+	if (a == undefined) {
 		//....
 	}
 	
