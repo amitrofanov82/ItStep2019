@@ -34,10 +34,6 @@ for (let i in arr) {
    console.log(i); // выводит "0", "1", "2", "foo"
 }
 
-for (let i of arr) {
-   console.log(i); // выводит "3", "5", "7"
-}
-
 	
 Условия - тернарный и иф как в джаве. select Case немного другой:
 	

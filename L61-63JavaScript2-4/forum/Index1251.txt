@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="css/main.css">
+<title>My first forum</title>
+</head>
+<body>
+
+	<div id="header">
+		<div id="logo">
+			<img src="resources/logo.png" height="150px">
+		</div>
+		<div id="description">
+			<h1>Форум начинающих JAVA программистов</h1>
+			<p>
+				КиберФорум - форум программистов, системных администраторов,
+				администраторов баз данных,<br> компьютерный форум, форум по
+				электронике и бытовой технике, обсуждение софта.<br> Бесплатная
+				помощь в решении задач по программированию, математике, физике и
+				другим наукам.
+			</p>
+		</div>
+		<div id="authorization">
+			<form action="#">
+				<input placeholder="Логин" type="text"> <br> <input
+					placeholder="Пароль" type="password"> <br> <input
+					type="submit" value="Вход"> <input type="checkbox"
+					value="yes"> Запомнить <br /> <a href="#">Забыли
+					пароль?</a> <br> <a href="#">Регистрация</a>
+			</form>
+		</div>
+	</div>
+
+	<div id="buttonPanel">
+		<table id="buttonTable">
+			<tr>
+				<td class="tbutton"><a href="#">ГЛАВНАЯ</a></td>
+				<td class="tbutton"><a href="#">ПРАВИЛА</a></td>
+				<td class="tbutton"><a href="#">ПОИСК</a></td>
+				<td class="tbutton"><a href="#">ПОЛЬЗОВАТЕЛИ</a></td>
+				<td class="tbutton"><a href="#">БЛОГИ</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="forumBody">
+		<table>
+			<tr>
+				<td class="tableTitle" colspan="5">Программирование</td>
+			</tr>
+			<tr class="tableHead">
+				<td class="t1"></td>
+				<td class="t2">Разделы</td>
+				<td class="t1">Тем</td>
+				<td class="t1">Ответов</td>
+				<td class="t3">Обновления</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="tableTitle" colspan="5"></td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td class="tableTitle" colspan="5">Дизайн</td>
+			</tr>
+			<tr class="tableHead">
+				<td class="t1"></td>
+				<td class="t2">Разделы</td>
+				<td class="t1">Тем</td>
+				<td class="t1">Ответов</td>
+				<td class="t3">Обновления</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="tableTitle" colspan="5"></td>
+			</tr>
+		</table>
+
+		<table>
+			<tr>
+				<td class="tableTitle" colspan="5">Курилка</td>
+			</tr>
+			<tr class="tableHead">
+				<td class="t1"></td>
+				<td class="t2">Разделы</td>
+				<td class="t1">Тем</td>
+				<td class="t1">Ответов</td>
+				<td class="t3">Обновления</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="t1"><img src="resources/javaico.png"></td>
+				<td class="t2">Нет разделов</td>
+				<td class="t1">0</td>
+				<td class="t1">0</td>
+				<td class="t3">Нет тем</td>
+			</tr>
+			<tr>
+				<td class="tableTitle" colspan="5"></td>
+			</tr>
+		</table>
+
+	</div>
+
+
+</body>
+</html>

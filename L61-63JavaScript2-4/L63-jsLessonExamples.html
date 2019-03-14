@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<script type="text/javascript">
+		"use strict";
+		function printSomething(){
+			console.log("smth");
+			return "result: success";
+		}	
+		
+		printSomething = "vasya";
+		
+		
+		function callOtherFunction(otherFunc){
+			console.log('------');
+			console.log(otherFunc);
+			console.log(otherFunc());
+			console.log(arguments[2])
+			console.log(arguments[1]());
+		}
+		
+		callOtherFunction(printSomething);
+		
+	</script>
+	<script>
+		var userName = "Vasya";
+		callOtherFunction(function (){
+			console.log("cocrete statement");
+		}, printSomething, "privet");
+		
+		var f1 = function (){
+			return "Alesya";
+		}
+		userName = f1;
+		f2=f3=f1;
+		
+		callOtherFunction(f1, f2, f3);
+		callOtherFunction();
+	</script>
+	
+
+
+
+</head>
+
+
+
+<body >
+
+</body>
+
+</html>
