@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+div:after{
+	float: none;
+}
+
+h3{
+	position:relative;
+	bottom:50%;
+}
+
+/* 1 level */
+#calculator {
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	
+	background-color: grey;
+	height: 240px;
+	width: 255px;
+}
+
+/* 2 level */
+#digitsArea{
+	margin: 10px 10px 10px 10px;
+	padding: 5px 5px 5px 5px;
+	
+	background-color: purple;
+	text-align: right;
+	height: 30px;
+	width: 225px;
+}
+
+/* 2 level */
+#pad{
+	margin: 10px 10px 10px 10px;
+	padding: 5px 5px 5px 5px;
+	
+	background-color: blue;
+	height: 170px;
+	width: 225px;
+}
+
+/* 3 level */
+#numberPad{
+	float:left;
+	margin: 10px 5px 10px 5px;
+	padding: 5px 5px 5px 5px;
+	
+	background-color: snow;
+	width: 105px;
+}
+
+/* 3 level */
+#actionPad{
+	float:right;
+	margin: 10px 5px 10px 5px;
+	padding: 5px 5px 5px 5px;
+	
+	background-color: green;
+	width: 70px;
+}
+
+.digitButton{
+	margin: 5px;
+	height: 25px;
+	width: 25px;
+}
+
+.actionButton{
+	margin: 5px;
+	height: 25px;
+	width: 25px;
+}

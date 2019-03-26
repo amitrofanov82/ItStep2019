@@ -51,7 +51,7 @@ https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Array_c
 Функция - это объект.
 new Function('x', 'текст');
 
- async function* -  больше об этом при Аджаксе.
+async function* -  больше об этом при Аджаксе.
 
 Замыкания, особенности this и прочие особенностями с функциями - через неделю.
 https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Functions

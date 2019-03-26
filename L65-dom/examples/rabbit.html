@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rabbit</title>
+<style type="text/css">
+
+#block{
+	background-color: red;
+	width: 540px;
+	height: 540px;
+	border: 2px;
+	border-radius: 20px;
+}
+#image{
+	margin: 20px;
+	position:relative;
+	top:0px;
+	transition-property: top;
+    transition-duration: 0.7s;
+}
+
+#button{
+	height: 30px;
+	width: 50px;
+	text-align: center;
+	padding: 2px;
+	margin: 20px;
+
+}
+
+</style>
+<script type="text/javascript">
+var button,image,block;
+
+function onClick() {
+	jump("-20px");
+	setTimeout(fallen, 400);
+}
+
+function jump(value) {
+	image.style.top = value;
+}
+
+function fallen() {
+	image.style.top = "0px";
+}
+
+
+function rabbit() {
+	block = document.createElement("div");
+	block.setAttribute("id","block");
+	
+	image = document.createElement("img");
+	image.setAttribute("id","image");
+	image.setAttribute("src","image.png");
+	
+	button = document.createElement("button");
+	button.setAttribute("id","button");
+	button.innerHTML = "JUMP!";
+	button.addEventListener("click", onClick);
+	
+	block.appendChild(image);
+	block.appendChild(button);
+	document.body.appendChild(block);
+}
+</script>
+</head>
+<body>
+	<script>
+		rabbit();
+	</script>
+</body>
+</html>
