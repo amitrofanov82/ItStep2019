@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss.SSS} $${env:JournalDevVar} $${env:JournalDevSecondVar} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<JDBC name="databaseAppender" tableName="journaldev.logging">
+			<DataSource jdbcurl="postgre:/aaaa/JournalDevDB" />
+			<Column name="EVENT_DATE" isEventTimestamp="true" />
+			<Column name="LEVEL" pattern="%level" />
+			<Column name="LOGGER" pattern="%logger" />
+			<Column name="MSG" pattern="%message" />
+			<Column name="THROWABLE" pattern="%ex{full}" />
+		</JDBC>
+		<File name="FileAppender" fileName="log4j2output.log" bufferedIO="false"/>
+
+	</Appenders>
+	<Loggers>
+		<Root level="ERROR">
+			<AppenderRef ref="Console" />
+		</Root>
+		<logger name="Log4jV2Example" level="TRACE" additivity="false">
+			<AppenderRef ref="databaseAppender" />
+		</logger>
+		<logger name="Log4jV2SomeOtherClass" additivity="true">
+			<AppenderRef ref="FileAppender" />
+		</logger>
+	</Loggers>
+</Configuration>
