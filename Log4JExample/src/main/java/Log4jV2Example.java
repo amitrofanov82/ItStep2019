@@ -18,6 +18,8 @@ public class Log4jV2Example {
 		log.error("error hi");
 		log.fatal("fatal hi");
 		
+		
+		
 		Log4jV2SomeOtherClass.main(null);
 		
 		/*System.out.println(log.getLevel());

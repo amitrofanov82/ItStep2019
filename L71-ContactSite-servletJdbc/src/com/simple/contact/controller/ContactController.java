@@ -47,6 +47,7 @@ public class ContactController extends HttpServlet {
 			req.setAttribute("contacts", paginator.getListOnPage(contacts));
 			req.getRequestDispatcher(CONTACTS_PAGE_PATH).forward(req, resp);
 		} catch (ServiceException | UtilException e) {
+			System.out.println("!!!" + e);
 			req.setAttribute("errorMessage", e.getMessage());
 			req.getRequestDispatcher(ERROR_PAGE_PATH).forward(req, resp);
 		}

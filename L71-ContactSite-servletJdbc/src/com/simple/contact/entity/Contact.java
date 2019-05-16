@@ -2,15 +2,34 @@ package com.simple.contact.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "contact")
 public class Contact implements Serializable {
 
 	private static final long serialVersionUID = -5886422562159667350L;
-
+	
+	@Id
+	@Column(name = "contact_id")
 	private Long id;
+	
+	@Column
 	private String name;
+	
+	@Column
 	private String surname;
+	
+	@Column
 	private String login;
+	
+	@Column
 	private String email;
+	
+	@Column(name = "phone")
 	private String phoneNumber;
 
 	public String getName() {

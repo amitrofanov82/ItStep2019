@@ -47,9 +47,11 @@ public class ImportController extends HttpServlet {
 			req.setAttribute("uploadMessage", UPLOAD_SUCCESS_MESSAGE);
 			req.getRequestDispatcher(IMPORT_PAGE_PATH).forward(req, resp);
 		} catch (UtilException e) {
+			System.out.println("!!!" + e);
 			req.setAttribute("uploadMessage", UPLOAD_FAILURE_MESSAGE);
 			req.getRequestDispatcher(IMPORT_PAGE_PATH).forward(req, resp);
 		} catch (ServiceException e) {
+			System.out.println("!!!" + e);
 			req.setAttribute("errorMessage", e.getMessage());
 			req.getRequestDispatcher(ERROR_PAGE_PATH).forward(req, resp);
 		}

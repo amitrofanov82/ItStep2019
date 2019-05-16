@@ -9,16 +9,16 @@ import com.simple.contact.exception.DaoException;
 public class ConnectionFactory {
 
 	private static ConnectionFactory instance = new ConnectionFactory();
-	public static final String URL = "jdbc:mysql://localhost/contacts";
-	public static final String USER = "****************";
-	public static final String PASSWORD = "*************";
-	public static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
+	public static final String URL = "jdbc:postgresql://localhost/Sample2019DB";
+	public static final String USER = "postgres";
+	public static final String PASSWORD = "admin";
+	public static final String DRIVER_CLASS = "org.postgresql.Driver";
 
 	private ConnectionFactory() {
 		try {
 			Class.forName(DRIVER_CLASS);
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("!!!!" + e);
 		}
 	}
 
