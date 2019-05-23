@@ -1,0 +1,16 @@
+{"id":13, 
+"category": "Books", 
+"shop_name": "Crafter",
+"shop_rating": "5.0",
+"name":"Book Cover",
+"sizes": ["M"],
+"material": "Leather, Paper",
+"colors": ["brown"],
+"description":"Cool stuff, its book cover, you can hide ugly books into this thing!", 
+"price": 49.99,
+"isFavorite": false,
+"url":["/resources/products/3.jpg", "/resources/products/3.jpg"],
+"comments": 
+	[{"author": "PinkPony", "comment": "This is a reason to read books!!!!"},
+	{"author": "Hater666", "comment": "Piece of shit"}]
+}

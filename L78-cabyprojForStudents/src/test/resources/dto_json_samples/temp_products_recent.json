@@ -1,0 +1,8 @@
+[{"id":1, "category": "Mega-Vintage", "shop": "NonPenisCanina", "name":"Helmet", "description":"Original helmet of Rome legioneers", "price": 999.99, "url":"/resources/products/1.jpg"},
+{"id":2, "category": "Linen", "shop": "NonPenisCanina", "name":"Pillow", "description":"Just usual black pillow on which you can sleep", "price": 99.99, "url":"/resources/products/2.jpg"},
+{"id":13, "category": "Accessories", "shop": "Crafter", "name":"Book Cover", "description":"Cool stuff, its book cover, you can hide ugly books into this thing!", "price": 49.99, "url":"/resources/products/3.jpg"},
+{"id":4, "category": "Accessories", "shop": "Crafter", "name":"Beer box", "description":"Most useful thing EVER!", "price": 69, "url":"/resources/products/4.jpg"},
+{"id":25, "category": "Accessories", "shop": "SomeOtherShop", "name":"Purse", "description":"Purse for money and different tiny stuff", "price": 45.93, "url":"/resources/products/5.jpg"},
+{"id":6, "category": "Accessories", "shop": "Crafter", "name":"Book Cover", "description":"Cool stuff, its book cover, you can hide ugly books into this thing!", "price": 49.99, "url":"/resources/products/3.jpg"},
+{"id":7, "category": "Accessories", "shop": "Crafter", "name":"Beer box", "description":"Most useful thing EVER!", "price": 69, "url":"/resources/products/4.jpg"},
+{"id":28, "category": "Accessories", "shop": "SomeOtherShop", "name":"Purse", "description":"Purse for money and different tiny stuff", "price": 45.93, "url":"/resources/products/5.jpg"}]

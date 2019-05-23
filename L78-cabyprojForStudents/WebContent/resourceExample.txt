@@ -1,0 +1,1 @@
+any file can be here, but this is not a source code. It's a basic example of the storage. Application is preconfigured to map all /resource/** requests to files from this directory. Subdirectories are supported. 

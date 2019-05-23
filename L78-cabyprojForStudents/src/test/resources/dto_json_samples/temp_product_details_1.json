@@ -1,0 +1,16 @@
+{"id":23, 
+"category": "Accessories", 
+"shop_name": "SomeShopName",
+"shop_rating": "4.5",
+"name":"Purse",
+"sizes": ["M", "L", "XL"],
+"material": "Leather, Metal",
+"colors": ["#FF0000", "#8B4513"],
+"description":"Purse for money and different tiny stuff", 
+"price": 45.93,
+"isFavorite": false,
+"url":["/resources/products/5.jpg", "/resources/products/4.jpg"],
+"comments": 
+	[{"author": "PinkPony", "comment": "Amazing!! Wonderful! I love it!! I Love author!! I love shop!!! I love this site!!!! U R BEST!! ^_^"},
+	{"author": "Hater666", "comment": "This is shit. Worst stuff ever. I want the author to die horribly "}]
+}
