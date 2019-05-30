@@ -1,7 +1,17 @@
 package com.epam.mentoring.spring.core.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Reservation {
 
+	public Reservation(){
+		setCost(10.0);
+		setCustomer(new User());
+		setFilmName("Test film");
+		setNumber("12345");
+	}
+	
 	private String number;
 	private String filmName;
 	private Session session;

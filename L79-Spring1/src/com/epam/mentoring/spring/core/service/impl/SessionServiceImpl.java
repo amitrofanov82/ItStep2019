@@ -5,17 +5,22 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import com.epam.mentoring.spring.core.dao.SessionDao;
 import com.epam.mentoring.spring.core.exception.ServiceException;
 import com.epam.mentoring.spring.core.model.Session;
 import com.epam.mentoring.spring.core.service.SessionService;
 
+@Service
 public class SessionServiceImpl implements SessionService {
 
 	private static final Logger logger = Logger.getLogger(SessionServiceImpl.class);
 
-	@Autowired
+	//javax.inject.@Inject
+	@Autowired(required = true)
+	//@Qualifier("vasyaAkaSessionDao")
 	private SessionDao sessionDao;
 	
 	public SessionServiceImpl(SessionDao sessionDao) {

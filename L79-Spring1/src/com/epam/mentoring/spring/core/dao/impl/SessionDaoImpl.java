@@ -6,10 +6,12 @@ import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import com.epam.mentoring.spring.core.dao.SessionDao;
 import com.epam.mentoring.spring.core.model.Session;
 
+@Component
 public class SessionDaoImpl implements SessionDao {
 
 	private static final Logger logger = Logger.getLogger(SessionDaoImpl.class);

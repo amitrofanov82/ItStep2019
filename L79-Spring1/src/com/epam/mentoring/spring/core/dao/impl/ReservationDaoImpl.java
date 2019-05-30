@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.epam.mentoring.spring.core.dao.ReservationDao;
 import com.epam.mentoring.spring.core.model.Reservation;
 
+@Repository
 public class ReservationDaoImpl implements ReservationDao {
 
 	private static final Logger logger = Logger.getLogger(ReservationDaoImpl.class);

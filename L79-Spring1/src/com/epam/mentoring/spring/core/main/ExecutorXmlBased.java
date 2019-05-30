@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.epam.mentoring.spring.core.configuration.BaseBeansConfiguration;
 import com.epam.mentoring.spring.core.configuration.ProdBeansConfiguration;
@@ -15,19 +16,16 @@ import com.epam.mentoring.spring.core.model.Session;
 import com.epam.mentoring.spring.core.service.ReservationService;
 import com.epam.mentoring.spring.core.service.SessionService;
 
-public class Executor {
+public class ExecutorXmlBased {
 
-	private static final Logger logger = Logger.getLogger(Executor.class);
+	private static final Logger logger = Logger.getLogger(ExecutorXmlBased.class);
 
 	// To specify active profile use VM argument:
 	// -Dspring.profiles.active="profile_name"
 	public static void main(String[] args) {
 		
 		ConfigurableApplicationContext context 
-			= new AnnotationConfigApplicationContext(
-				BaseBeansConfiguration.class,
-				ProdBeansConfiguration.class, 
-				TestBeansConfiguration.class);
+			= new ClassPathXmlApplicationContext("Beans.xml");
 
 		SessionService sessionService = context.getBeanFactory().getBean(SessionService.class);
 		ReservationService reservationService = context.getBean(ReservationService.class);

@@ -12,7 +12,7 @@ import com.epam.mentoring.spring.core.model.Reservation;
 import com.epam.mentoring.spring.core.model.Session;
 import com.epam.mentoring.spring.core.model.User;
 
-@Configuration
+//@Configuration
 //@Profile("prod")//-Dprofile=prod
 public class ProdBeansConfiguration {
 

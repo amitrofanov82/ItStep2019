@@ -12,8 +12,8 @@ import com.epam.mentoring.spring.core.model.Reservation;
 import com.epam.mentoring.spring.core.model.Session;
 import com.epam.mentoring.spring.core.model.User;
 
-@Configuration
-@Profile("test")
+//@Configuration
+//@Profile("test")
 public class TestBeansConfiguration {
 
 	@Autowired

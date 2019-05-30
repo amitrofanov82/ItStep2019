@@ -1,5 +1,8 @@
 package com.epam.mentoring.spring.core.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 
 	private String firstName;
