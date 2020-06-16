@@ -115,7 +115,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>23.1-jre</version> <!-- Guava version is not managed by parent Spring Boot pom.xml -->
+			<version>24.1.1-jre</version> <!-- Guava version is not managed by parent Spring Boot pom.xml -->
 		</dependency>
 		<dependency>
 			<groupId>commons-io</groupId>
